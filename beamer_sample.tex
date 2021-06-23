@@ -1,0 +1,135 @@
+%xelatex
+
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{cite,natbib} %For better bibliography.
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{tikz-cd} %For commutative diagrams.
+\usetikzlibrary{matrix}
+
+\usetheme[block=fill,numbering=fraction,progressbar=frametitle]{metropolis}
+\useinnertheme{circles}
+
+%\setbeamertemplate{theorems}[numbered]
+
+\usepackage{thmtools} %for spacing of theroem heading in title environment.
+\declaretheoremstyle[
+headfont=\bfseries,%
+headpunct={\vspace{\topsep}\newline}, %
+numbered=no,
+spaceabove=3\topsep, %
+postheadspace=0 pt ]{exercs}
+
+
+%For better bibliography.
+\bibliographystyle{unsrt}
+\renewcommand{\bibfont}{\footnotesize}
+\setbeamertemplate{frametitle continuation}[from second]
+
+\newcommand{\bbox}[1]{
+	\noindent\fbox{ \parbox{\textwidth}{#1} \vspace{2pt}} }
+\renewcommand{\bibsection}{}
+
+%Theorem environments
+\usepackage{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em}
+\theoremstyle{definition}
+\newmdtheoremenv[nobreak=true]{lmma}{Lemma}
+\newmdtheoremenv{conclusion}{Conclusion}
+\newtheorem{defn}{Definition}
+\newmdtheoremenv{prop}{Proposition}
+\newmdtheoremenv{lma}{Lemma}
+\newmdtheoremenv{cor}{Corollary}
+\newmdtheoremenv{thm}{Theorem}
+\newtheorem*{obs}{Observation}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+% Some shortcuts
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\renewcommand\C{\ensuremath{\mathbb{C}}}
+\newcommand\F{\ensuremath{\mathbb{F}}}
+\newcommand{\Zn}{\ensuremath{\mathbb{Z}_{\geq 0}^n}}
+\newcommand{\m}{\ensuremath{\mathfrak{m}}}
+\renewcommand{\S}{\ensuremath{\mathcal{S}}}
+\renewcommand{\a}{\ensuremath{\mathfrak{a}}}
+\renewcommand{\b}{\ensuremath{\mathfrak{b}}}
+
+%Make implies and impliedby shorter
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+\let\epsilon\varepsilon
+\let\phi\varphi
+
+% Add \contra symbol to denote contradiction
+\usepackage{stmaryrd} % for \lightning
+\newcommand\contra{\scalebox{1.5}{$\lightning$}}
+
+\usepackage{thmtools}
+\usepackage{kantlipsum}
+
+\declaretheoremstyle[
+headfont=\bfseries,%
+headpunct={\vspace{\topsep}\newline}, %
+numbered=no,
+spaceabove=3\topsep, %
+postheadspace=0 pt ]{exercs}
+\declaretheorem[name=EXERCISES,style=exercs]{problems}
+
+\author{Akshay Dhan}
+
+%-------------------------------------------------------------
+\usecolortheme{dove} %lily, spruce, wolverine, monarca, sidebartab,dove,seagull
+
+\title{Title}
+\subtitle{Subtitle}
+\institute{Institute}
+\date{\today}
+%\titlegraphic{\hfill\includegraphics[height=0.5cm]{Images/logo.png}}
+
+
+\begin{document}
+%-------------------------------------------------------------
+\frame{\titlepage}
+%-------------------------------------------------------------
+\begin{frame}{lorem ipsum}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+	tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+	voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+	clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+	amet.
+\end{frame}
+%-------------------------------------------------------------
+\begin{frame}{}
+	\begin{thm}[lorem]
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+		eirmod tempor invidunt ut labore et dolore magna aliquyam
+		erat, sed diam voluptua. At vero eos et accusam et justo
+		duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+		takimata sanctus est Lorem ipsum dolor sit amet.
+\end{thm}
+\end{frame}
+%-------------------------------------------------------------
+
+\begin{frame}[t]{References}\vspace{10pt}
+\begin{thebibliography}{abcd}
+\bibitem{AB}
+A. Author Name, 
+{\it Title of Paper}, Journal Name, Volume No(Year), (page nos) 1-2.
+
+\bibitem{BZ1}
+R. Taylor, A. Wiles, {\it Ring theoretic properties of certain Hecke algebras}, Ann. of Math., \textbf{141}(3) (1995), 553-572.
+
+\end{thebibliography}
+\end{frame}
+%-------------------------------------------------------------
+
+\end{document}
