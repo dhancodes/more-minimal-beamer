@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{mathtools}
+\usepackage{amssymb,amsthm}
+\usepackage{cite}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz-cd}%For commutative diagram.
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\def\Author{Akshay Dhan}
+\def\Date{\today}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={175mm,263mm},
+ left=15mm,
+ top=15mm,
+ }
+
+%Theorem environments
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{thm}{Theorem}
+\newtheorem*{obs}{Observation}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+%Some quick get arounds.
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\m}{\mathfrak{m}}
+\renewcommand{\S}{\mathcal{S}}
+\renewcommand{\a}{\mathfrak{a}}
+
+\newcommand{\plusbinomial}[3][2]{(#2 + #3)^#1}
+\newcommand{\heading}[4][\Date]{
+	\noindent\fbox{ \parbox{\textwidth}{ \textbf{#2} \hfill #1 \quad \begin{center}\Large Lecture #3\end{center} \textsl{Lecturer: #4 \hfill Note taken: \Author}}}\newpage}
+\begin{document}
+\makeatletter
+%-------------------- --- --------------------
+\heading{Code 126}{1}{name}
+
+
+\end{document}
