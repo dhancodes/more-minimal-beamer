@@ -1,5 +1,3 @@
-%xelatex
-
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -14,17 +12,16 @@
 \useinnertheme{circles}
 
 %\setbeamertemplate{theorems}[numbered]
-
-\usepackage{thmtools} %for spacing of theroem heading in title environment.
+\usepackage{thmtools}
 \declaretheoremstyle[
-headfont=\bfseries,%
-headpunct={\vspace{\topsep}\newline}, %
-numbered=no,
-spaceabove=3\topsep, %
-postheadspace=0 pt ]{exercs}
+	headfont      = \bfseries,
+	headpunct     = {\vspace{\topsep}\newline},
+	numbered      = no,
+	spaceabove    = 3\topsep,
+	postheadspace = 0 pt
+]{exercs}
 
-
-%For better bibliography.
+% ━━ Better bibliography ──────────────────────────────────────────────────────
 \bibliographystyle{unsrt}
 \renewcommand{\bibfont}{\footnotesize}
 \setbeamertemplate{frametitle continuation}[from second]
@@ -33,7 +30,7 @@ postheadspace=0 pt ]{exercs}
 	\noindent\fbox{ \parbox{\textwidth}{#1} \vspace{2pt}} }
 \renewcommand{\bibsection}{}
 
-%Theorem environments
+% ━━ Theorem envs ─────────────────────────────────────────────────────────────
 \usepackage{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
 \theoremstyle{definition}
@@ -48,7 +45,7 @@ postheadspace=0 pt ]{exercs}
 \theoremstyle{remark}
 \newtheorem*{rmk}{Remark}
 
-% Some shortcuts
+% ━━ Shorthands ───────────────────────────────────────────────────────────────
 \newcommand\N{\ensuremath{\mathbb{N}}}
 \newcommand\R{\ensuremath{\mathbb{R}}}
 \newcommand\Z{\ensuremath{\mathbb{Z}}}
@@ -72,29 +69,30 @@ postheadspace=0 pt ]{exercs}
 \usepackage{kantlipsum}
 
 \declaretheoremstyle[
-headfont=\bfseries,%
-headpunct={\vspace{\topsep}\newline}, %
-numbered=no,
-spaceabove=3\topsep, %
-postheadspace=0 pt ]{exercs}
+	headfont      = \bfseries,
+	headpunct     = {\vspace{\topsep}\newline},
+	numbered      = no,
+	spaceabove    = 3\topsep,
+	postheadspace = 0 pt
+]{exercs}
 \declaretheorem[name=EXERCISES,style=exercs]{problems}
 
-\author{Akshay Dhan}
-
-%-------------------------------------------------------------
+% ━━ Theme ────────────────────────────────────────────────────────────────────
 \usecolortheme{dove} %lily, spruce, wolverine, monarca, sidebartab,dove,seagull
 
+% ━━ Parameters ────────────────────────────────────────────────────────────────
+\author{Akshay Dhan}
 \title{Title}
 \subtitle{Subtitle}
 \institute{Institute}
 \date{\today}
 %\titlegraphic{\hfill\includegraphics[height=0.5cm]{Images/logo.png}}
 
-
+%──────────────────────────────────────────────────────────────────────────────
 \begin{document}
-%-------------------------------------------------------------
 \frame{\titlepage}
-%-------------------------------------------------------------
+
+%──────────────────────────────────────────────────────────────────────────────
 \begin{frame}{lorem ipsum}
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 	tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -102,7 +100,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 	clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
 	amet.
 \end{frame}
-%-------------------------------------------------------------
+%──────────────────────────────────────────────────────────────────────────────
 \begin{frame}{lorem ipsum}
 	\begin{thm}[lorem]
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -112,8 +110,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
 		takimata sanctus est Lorem ipsum dolor sit amet.
 \end{thm}
 \end{frame}
-%-------------------------------------------------------------
-
+%──────────────────────────────────────────────────────────────────────────────
 \begin{frame}[t]{References}\vspace{10pt}
 \begin{thebibliography}{abcd}
 \bibitem{AB}
@@ -125,6 +122,5 @@ R. Taylor, A. Wiles, {\it Ring theoretic properties of certain Hecke algebras}, 
 
 \end{thebibliography}
 \end{frame}
-%-------------------------------------------------------------
-
+%──────────────────────────────────────────────────────────────────────────────
 \end{document}
